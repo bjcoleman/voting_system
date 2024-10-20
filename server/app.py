@@ -2,8 +2,11 @@
 from flask import Flask, jsonify, request, render_template
 import json
 from memory_votes import MemoryVotes
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 votes = MemoryVotes()
 
 
@@ -35,4 +38,4 @@ def vote():
 
 
 if __name__ == '__main__':
-    app.run(port=8000, debug=True)
+    app.run(port=80, debug=True)
