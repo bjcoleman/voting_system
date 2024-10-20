@@ -1,2 +1,2 @@
-gunicorn -w1 -b 0.0.0.0:80 app:app
+.venv/bin/gunicorn -w1 -b 0.0.0.0:80 app:app
 
